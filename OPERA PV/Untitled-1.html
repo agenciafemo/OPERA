@@ -1,0 +1,77 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1 aria-label="Desvende o Código Secreto para uma Carreira de Luxo">
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">Desvende</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">o</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">Código</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">Secreto</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">para</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">uma</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">Carreira</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;">de</span></span>
+      <span class="word-wrapper" style="display: inline-block;"><span class="word" style="display: block;"><em>Luxo</em></span></span>
+    </h1>
+    <p>Acesso exclusi/* -- CSS para Animação de Texto Editorial na Seção Hero -- */
+    
+    /* O wrapper que funciona como uma "máscara", escondendo a palavra que está fora de vista.
+       É crucial para o efeito de revelação. */
+    .word-wrapper {
+        /* Garante que a palavra (um elemento de bloco) não quebre a linha. */
+        display: inline-block;
+        /* A mágica acontece aqui: qualquer conteúdo do filho (.word) que transborde será cortado. */
+        overflow: hidden;
+        /* Alinha os wrappers pela parte inferior para evitar desalinhamentos visuais durante a animação. */
+        vertical-align: bottom;
+    }
+    
+    /* A palavra individual que será animada. */
+    .word {
+        /* Permite o uso de transformações como translateY. */
+        display: block;
+        /* Estado inicial: a palavra começa 110% abaixo de sua posição final, completamente escondida pela máscara do .word-wrapper. */
+        transform: translateY(110%);
+        /* Informa ao navegador para otimizar a animação da propriedade 'transform', melhorando a performance. */
+        will-change: transform;
+        /* Aplica a animação:
+           - Nome: revealWord
+           - Duração: 0.8s
+           - Curva de tempo: uma curva "ease-out" agressiva para um efeito rápido e suave.
+           - Modo de preenchimento: 'forwards' garante que a palavra permaneça no estado final (translateY(0)) após a animação. */
+        animation: revealWord 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    /* A definição da animação. Move a palavra de sua posição oculta para a posição visível. */
+    @keyframes revealWord {
+        from {
+            transform: translateY(110%);
+        }
+        to {
+            transform: translateY(0%);
+        }
+    }
+    
+    /* Efeito Escalonado (Stagger):
+       Aplicamos um atraso crescente a cada palavra para que elas apareçam uma após a outra. */
+    .word-wrapper:nth-child(1) .word { animation-delay: 0.05s; }
+    .word-wrapper:nth-child(2) .word { animation-delay: 0.10s; }
+    .word-wrapper:nth-child(3) .word { animation-delay: 0.15s; }
+    .word-wrapper:nth-child(4) .word { animation-delay: 0.20s; }
+    .word-wrapper:nth-child(5) .word { animation-delay: 0.25s; }
+    .word-wrapper:nth-child(6) .word { animation-delay: 0.30s; }
+    .word-wrapper:nth-child(7) .word { animation-delay: 0.35s; }
+    .word-wrapper:nth-child(8) .word { animation-delay: 0.40s; }
+    .word-wrapper:nth-child(9) .word { animation-delay: 0.45s; }
+    
+    /* Garante que o estilo de itálico seja preservado dentro da estrutura animada. */
+    .word em {
+        font-style: italic;
+    }
+    
+    /* --- Melhoria Opcional ---
+       Para um código mais limpo, você pode remover os estilos inline 'style="..."' do seu HTML
+       e garantir que as regras '.word-wrapper { display: inline-block; }' e
+       '.word { display: block; }' estejam neste bloco de CSS. */
+    vo ao método que transforma desenvolvedores em especialistas cobiçados pelas maiores marcas do mundo.</p>
+    <a href="#pilares" class="btn">Descobrir o Método</a>
+  </div>
+</section>
