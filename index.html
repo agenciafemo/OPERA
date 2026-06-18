@@ -1212,8 +1212,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // COOKIE MANAGEMENT
 function checkCookieConsent(){
-  if(!getCookie('opera-cookies-accepted')){
-    document.getElementById('cookieBanner').style.display='flex';
+  const cookie=getCookie('opera-cookies-accepted');
+  const banner=document.getElementById('cookieBanner');
+  if(cookie==='true'){
+    banner.style.display='none';
+    enableVideoSound();
+  }else if(!cookie){
+    banner.style.display='flex';
   }
 }
 
@@ -1240,7 +1245,7 @@ function setCookie(name,value,days){
   const d=new Date();
   d.setTime(d.getTime()+(days*24*60*60*1000));
   const expires='expires='+d.toUTCString();
-  document.cookie=name+'='+value+';'+expires+';path=/';
+  document.cookie=name+'='+value+';'+expires+';path=/;SameSite=Lax';
 }
 
 function getCookie(name){
