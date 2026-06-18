@@ -333,19 +333,67 @@ footer{background:#0A0908;padding:48px 5vw;text-align:center;border-top:1px soli
 .f-logo span{color:var(--gold)}
 .f-tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.15);line-height:2}
 
-@media(max-width:900px){
-  .prob-layout{grid-template-columns:1fr;gap:48px}
-  .pillars-grid{grid-template-columns:1fr 1fr}
-  .fw-grid{grid-template-columns:1fr}
-  .about-wrap{grid-template-columns:1fr}
-  .about-img{min-height:70vw}
-  .about-text{padding:60px 5vw}
-  .depo-grid{grid-template-columns:1fr}
-  .mini-sobre-inner{flex-direction:column;text-align:center}
+/* TABLET - 768px e abaixo */
+@media(max-width:768px){
+  nav{padding:12px 4vw}
+  nav.up{padding:10px 4vw}
+  .hero{padding:100px 4vw 50px}
+  .hero-inner{max-width:100%}
+  .hero h1{font-size:clamp(28px,5vw,52px)}
+  .hero-sub{font-size:16px}
+  .sec{padding:70px 4vw}
+  .narrow{max-width:100%;padding:0 4vw}
+  .mid{max-width:100%;padding:0 4vw}
+  .wide{max-width:100%;padding:0 4vw}
+  h2.sec-title{font-size:clamp(24px,4vw,36px)}
+  .btn{padding:16px 28px;font-size:10px}
+  .prob-layout{grid-template-columns:1fr;gap:40px}
+  .pillars-grid{grid-template-columns:1fr 1fr;gap:2px}
+  .mini-sobre-inner{flex-direction:column;text-align:center;gap:20px}
+  .video-hook{font-size:clamp(16px,2vw,20px)}
+  .whatsapp-btn{width:52px;height:52px;bottom:20px;right:20px}
+  .cookie-banner{max-width:90vw;left:5vw;right:5vw}
+  .cookie-content{gap:12px}
 }
-@media(max-width:520px){
-  .pillars-grid{grid-template-columns:1fr}
-  .sec{padding:80px 5vw}
+
+/* MOBILE - 480px e abaixo */
+@media(max-width:480px){
+  nav{padding:10px 3vw}
+  nav.up{padding:8px 3vw}
+  .logo{font-size:14px}
+  .nav-cta{padding:8px 16px;font-size:9px}
+  .hero{padding:80px 3vw 40px}
+  .hero h1{font-size:clamp(24px,6vw,40px);margin-bottom:1rem}
+  .hero-tag{font-size:9px;margin-bottom:1.5rem}
+  .hero-sub{font-size:14px;line-height:1.6}
+  .sec{padding:50px 3vw}
+  .narrow{max-width:100%;padding:0 3vw}
+  .mid{max-width:100%;padding:0 3vw}
+  .wide{max-width:100%;padding:0 3vw}
+  h2.sec-title{font-size:clamp(20px,5vw,28px);margin-bottom:1rem}
+  .sec-body{font-size:14px}
+  .btn{padding:14px 24px;font-size:9px;display:block;width:100%;text-align:center}
+  .cta-sub-text{font-size:11px;margin-top:10px}
+  .pillars-grid{grid-template-columns:1fr;gap:2px}
+  .video-hook{font-size:clamp(14px,3vw,18px)}
+  .vsl{aspect-ratio:16/9;margin-bottom:1.5rem}
+  .play-btn{width:50px;height:50px}
+  .play-btn::after{font-size:16px}
+  .whatsapp-btn{width:48px;height:48px;bottom:15px;right:15px}
+  .whatsapp-icon{width:28px;height:28px}
+  .video-mute-btn{width:40px;height:40px;top:8px;right:8px}
+  .video-mute-btn svg{width:18px;height:18px}
+  .cookie-banner{max-width:90vw;left:5vw;right:5vw;bottom:15px;padding:15px 16px}
+  .cookie-content p{font-size:11px}
+  .btn-accept,.btn-reject{padding:8px 12px;font-size:9px}
+  .cookie-buttons{flex-direction:column;gap:8px}
+  .btn-accept,.btn-reject{width:100%}
+  .mini-sobre-inner{gap:15px}
+  .mini-foto{width:60px;height:60px}
+  .mini-texto{font-size:12px}
+  .pullquote{font-size:18px;padding-left:16px}
+  .f-links{font-size:11px}
+  .f-copyright{font-size:10px;line-height:1.5}
 }
 
 .play-ring{position:absolute;width:70px;height:70px;border-radius:50%;border:1px solid rgba(184,149,90,.3);animation:pulse-ring 2.4s ease-out infinite;pointer-events:none}
