@@ -285,7 +285,7 @@ footer{background:#0A0908;padding:48px 5vw;text-align:center;border-top:1px soli
 .f-copyright{font-size:11px;color:rgba(255,255,255,.25);padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.05)}
 
 /* COOKIE BANNER */
-.cookie-banner{position:fixed;bottom:20px;right:20px;background:rgba(14,13,11,.96);backdrop-filter:blur(8px);padding:20px 24px;z-index:999;display:flex;flex-direction:column;gap:16px;border:1px solid var(--gold);border-radius:8px;max-width:340px;animation:slideUp .4s ease;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.cookie-banner{position:fixed;bottom:20px;left:20px;background:rgba(14,13,11,.96);backdrop-filter:blur(8px);padding:20px 24px;z-index:999;display:flex;flex-direction:column;gap:16px;border:1px solid var(--gold);border-radius:8px;max-width:340px;animation:slideUp .4s ease;box-shadow:0 12px 40px rgba(0,0,0,.5)}
 .cookie-content{display:flex;flex-direction:column;gap:16px}
 .cookie-content p{color:rgba(255,255,255,.8);font-size:12px;line-height:1.5;margin:0}
 .cookie-content a{color:var(--gold);text-decoration:none;font-weight:600}
@@ -321,6 +321,14 @@ footer{background:#0A0908;padding:48px 5vw;text-align:center;border-top:1px soli
 .modal-body p{font-size:14px;color:var(--ink-soft);line-height:1.8;margin-bottom:1rem}
 
 @keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{position:fixed;bottom:30px;right:30px;width:60px;height:60px;background:linear-gradient(135deg,#25d366,#20ba5d);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:998;box-shadow:0 8px 24px rgba(37,211,102,.35);transition:all .35s cubic-bezier(.16,1,.3,1);text-decoration:none}
+.whatsapp-btn:hover{transform:scale(1.12);box-shadow:0 12px 32px rgba(37,211,102,.5)}
+.whatsapp-btn::before{content:'';position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.3),transparent);animation:whatsappPulse 2s ease-in-out infinite}
+.whatsapp-btn svg{width:32px;height:32px;fill:white;position:relative;z-index:1}
+
+@keyframes whatsappPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:.8}}
 .f-logo{font-family:var(--serif);font-size:20px;font-style:italic;font-weight:400;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:.5rem}
 .f-logo span{color:var(--gold)}
 .f-tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.15);line-height:2}
@@ -1219,5 +1227,12 @@ function toggleMute(){
   }
 }
 </script>
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/5548912821150" class="whatsapp-btn" target="_blank" title="Fale conosco no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.562 0-3.051.611-4.162 1.709L5.904 3.5c1.079-1.079 2.569-1.671 4.147-1.671h.004c3.179 0 5.771 2.585 5.771 5.75 0 1.54-.6 2.988-1.688 4.071l1.406 1.407c1.088-1.088 1.784-2.537 1.784-4.078 0-3.165-2.592-5.75-5.771-5.75" fill="currentColor"/>
+  </svg>
+</a>
+
 </body>
 </html>
